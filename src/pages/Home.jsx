@@ -7,5 +7,7 @@ import React from "react";
 // link to recipe detail page
 
 export default function Home() {
-    
+    return (
+        <div>Hello, World! This is the home page!</div>
+    )
 }
