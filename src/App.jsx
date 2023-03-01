@@ -1,12 +1,13 @@
-import React from "react";
-import Routing from "./pages/Routing";
+import React from 'react';
+import Pages from './pages/Pages';
+import { BrowserRouter } from 'react-router-dom';
 
 export default function App() {
-    return (
-        <div className="App">
-            <h1>Recipes</h1>
-            <Routing />
-            fetch('spoontacular.com/api&key="process.env.API_KEY")
-        </div>
-    )
+	return (
+		<div className="App">
+			<BrowserRouter>
+				<Pages />
+			</BrowserRouter>
+		</div>
+	);
 }
