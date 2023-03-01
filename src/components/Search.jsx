@@ -26,9 +26,7 @@ export default function Search() {
 	const getSearchResults = async (searchTerm, cuisineFilter) => {
 		setSearchedFor(searchTerm);
 		const response = await fetch(
-			`https://api.spoonacular.com/recipes/complexSearch?apiKey=${
-				import.meta.env.VITE_API_KEY
-			}&query=${searchTerm}&cuisine=${cuisineFilter}&number=20`
+			`https://api.spoonacular.com/recipes/complexSearch?apiKey=ed473cbc57b2497681c87b11c775f61d&query=${searchTerm}&cuisine=${cuisineFilter}&number=20`
 		);
 		const dishes = await response.json();
 		setRecipes(dishes.results);

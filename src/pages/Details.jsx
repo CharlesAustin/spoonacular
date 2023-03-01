@@ -19,9 +19,7 @@ export default function Details() {
 
 	const getDetails = async () => {
 		const response = await fetch(
-			`https://api.spoonacular.com/recipes/${
-				params.id
-			}/information?apiKey=${import.meta.env.VITE_API_KEY}`
+			`https://api.spoonacular.com/recipes/${params.id}/information?apiKey=ed473cbc57b2497681c87b11c775f61d`
 		);
 		const detailResult = await response.json();
 		setDetails(detailResult);
@@ -117,8 +115,11 @@ export default function Details() {
 						</div>
 						<div className="recipe__instructions">
 							<h2 className="recipe__subheader">Preparation</h2>
-							{details.instructions.replace(/(<([^>]+)>)/gi, '')}
-							{console.log(details)}
+							{details.instructions &&
+								details.instructions.replace(
+									/(<([^>]+)>)/gi,
+									''
+								)}
 						</div>
 					</div>
 				</>
